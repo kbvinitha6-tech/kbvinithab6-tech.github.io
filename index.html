@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Vinitha Baskar — Data Analyst and Power BI Developer portfolio.">
+<title>Vinitha Baskar | Data Analyst & Power BI Developer</title>
+<style>
+:root{
+  --bg:#07111f; --panel:#0c1829; --panel2:#101e31; --text:#eef4ff;
+  --muted:#aab7ca; --line:rgba(255,255,255,.10); --accent:#9b5cff;
+  --accent2:#ec55b8; --blue:#39a7ff; --max:1160px;
+}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(circle at 80% 5%,rgba(155,92,255,.18),transparent 28%),radial-gradient(circle at 15% 20%,rgba(57,167,255,.10),transparent 30%),var(--bg);color:var(--text);font-family:Inter,Segoe UI,Arial,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}
+.container{width:min(var(--max),92%);margin:auto}
+nav{position:sticky;top:0;z-index:20;background:rgba(7,17,31,.82);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.06em}
+.logo{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent2),var(--accent));font-weight:900}
+.navlinks{display:flex;gap:25px;color:#c8d2e2;font-size:14px}
+.navlinks a:hover{color:white}
+.resume{padding:10px 17px;border-radius:999px;background:linear-gradient(100deg,var(--accent2),var(--accent));font-weight:700;font-size:13px}
+.hero{padding:92px 0 70px}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:45px;align-items:center}
+.kicker{color:#b98cff;text-transform:uppercase;letter-spacing:.24em;font-weight:800;font-size:13px}
+h1{font-size:clamp(44px,6vw,78px);line-height:1.02;margin:14px 0 20px;letter-spacing:-.045em}
+.gradient{background:linear-gradient(100deg,#fff 15%,#b97cff 52%,#ff69bf);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{font-size:18px;color:var(--muted);max-width:680px}
+.actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:28px}
+.btn{padding:13px 20px;border:1px solid var(--line);border-radius:12px;font-weight:750;background:#0d1b2e}
+.btn.primary{border:0;background:linear-gradient(100deg,var(--accent2),var(--accent))}
+.btn:hover{transform:translateY(-2px)}
+.hero-card{padding:28px;border:1px solid rgba(185,124,255,.24);border-radius:24px;background:linear-gradient(145deg,rgba(155,92,255,.15),rgba(12,24,41,.85));box-shadow:0 25px 80px rgba(0,0,0,.25)}
+.stat{display:flex;justify-content:space-between;padding:15px 0;border-bottom:1px solid var(--line)}
+.stat:last-child{border-bottom:0}.stat b{font-size:27px}.stat span{color:var(--muted);font-size:13px}
+section{padding:72px 0}
+.section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:28px}
+.eyebrow{color:#a979ff;text-transform:uppercase;letter-spacing:.18em;font-size:12px;font-weight:800}
+h2{font-size:clamp(30px,4vw,46px);line-height:1.1;margin:7px 0}
+.section-head p{max-width:520px;color:var(--muted);margin:0}
+.skills{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.skill{padding:20px;border:1px solid var(--line);background:rgba(255,255,255,.035);border-radius:16px}
+.skill b{display:block;margin-bottom:7px}.skill span{color:var(--muted);font-size:14px}
+.filters{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:22px}
+.filter{cursor:pointer;border:1px solid #263850;background:transparent;color:#b9c6d8;padding:9px 15px;border-radius:999px}
+.filter.active,.filter:hover{background:linear-gradient(100deg,var(--accent2),var(--accent));color:#fff;border-color:transparent}
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.project{overflow:hidden;border:1px solid var(--line);border-radius:20px;background:linear-gradient(180deg,#0d1a2c,#091523);transition:.25s}
+.project:hover{transform:translateY(-4px);border-color:rgba(185,124,255,.45)}
+.thumb{height:300px;background:#050a12;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.thumb img{width:100%;height:100%;object-fit:contain;display:block}
+.project.canva .thumb{height:350px;background:#10131a}
+.project-body{padding:20px}
+.project-type{font-size:11px;color:#a979ff;text-transform:uppercase;letter-spacing:.13em;font-weight:800}
+.project h3{margin:6px 0;font-size:21px}.project p{color:var(--muted);font-size:14px;margin:0 0 14px}
+.tags{display:flex;flex-wrap:wrap;gap:7px}.tag{font-size:11px;color:#d4def0;background:#15263b;border:1px solid #233b57;padding:5px 9px;border-radius:999px}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.panel{padding:26px;border:1px solid var(--line);background:rgba(255,255,255,.035);border-radius:20px}
+.panel h3{margin-top:0}.panel p,.panel li{color:var(--muted)}
+.timeline{display:grid;gap:14px}.job{padding:20px;border-left:3px solid var(--accent);background:rgba(255,255,255,.035);border-radius:0 14px 14px 0}
+.job .date{color:#b98cff;font-size:12px;font-weight:700}.job h3{margin:4px 0}.job p{margin:4px 0;color:var(--muted)}
+.contact{display:grid;grid-template-columns:1fr .9fr;gap:20px}
+.contact-card{padding:28px;border-radius:22px;border:1px solid rgba(185,124,255,.24);background:linear-gradient(145deg,rgba(155,92,255,.12),rgba(255,255,255,.03))}
+.contact-row{padding:13px 0;border-bottom:1px solid var(--line)}.contact-row:last-child{border:0}.contact-row small{display:block;color:#8fa0b8}
+footer{padding:30px 0 45px;color:#8290a5;border-top:1px solid var(--line);font-size:13px}
+.mobile{display:none}
+@media(max-width:850px){
+ .navlinks{display:none}.mobile{display:block}.hero-grid,.about-grid,.contact{grid-template-columns:1fr}.skills{grid-template-columns:repeat(2,1fr)}.projects{grid-template-columns:1fr}.hero{padding-top:60px}.thumb{height:250px}.project.canva .thumb{height:330px}
+}
+@media(max-width:520px){.skills{grid-template-columns:1fr}.hero h1{font-size:46px}.section-head{display:block}.resume{display:none}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="container nav">
+    <a class="brand" href="#home"><span class="logo">VB</span><span>VINITHA BASKAR</span></a>
+    <div class="navlinks">
+      <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a>
+      <a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+    </div>
+    <a class="resume" href="Vinitha_Baskar_Data_Analyst_Resume.docx">Download Resume</a>
+    <span class="mobile">☰</span>
+  </div>
+</nav>
+
+<main>
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <div class="kicker">Data Analyst • Power BI Developer</div>
+      <h1>Turning <span class="gradient">data into insights</span> that teams can act on.</h1>
+      <p>I build interactive Power BI dashboards, clean and transform data, and create clear business reports using Power BI, DAX, Power Query, SQL and Excel.</p>
+      <div class="actions">
+        <a class="btn primary" href="#projects">View My Work →</a>
+        <a class="btn" href="Vinitha_Baskar_Data_Analyst_Resume.docx">Download Resume</a>
+        <a class="btn" href="#contact">Let's Connect</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="kicker">Career Snapshot</div>
+      <div class="stat"><span>Focus</span><b>Data Analytics</b></div>
+      <div class="stat"><span>Core Tool</span><b>Power BI</b></div>
+      <div class="stat"><span>Dashboards</span><b>4+</b></div>
+      <div class="stat"><span>Business Areas</span><b>HR · Sales · Retail</b></div>
+      <div class="stat"><span>Creative Skill</span><b>Canva</b></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+ <div class="container">
+  <div class="section-head"><div><div class="eyebrow">About Me</div><h2>Analytics with a business mindset.</h2></div>
+  <p>BBA graduate with hands-on Power BI internship experience and a complementary accounting background. I enjoy turning raw data into useful, easy-to-understand reports.</p></div>
+  <div class="about-grid">
+   <div class="panel"><h3>What I bring</h3><ul>
+    <li>Interactive KPI dashboards and business reporting.</li>
+    <li>DAX measures, Power Query transformations and basic data modeling.</li>
+    <li>SQL and Excel for analysis, cleaning and structured reporting.</li>
+    <li>AI-assisted workflows using ChatGPT, Microsoft Copilot, Power BI Copilot, Gemini and Claude.</li>
+   </ul></div>
+   <div class="panel"><h3>Job Search Focus</h3><p>Open to entry-level opportunities in Data Analytics, Power BI, MIS/reporting and business intelligence where I can contribute to reporting and decision support while continuing to grow.</p>
+   <div class="tags"><span class="tag">Data Analyst</span><span class="tag">Power BI Developer</span><span class="tag">BI / Reporting</span><span class="tag">MIS</span></div></div>
+  </div>
+ </div>
+</section>
+
+<section id="skills">
+ <div class="container">
+  <div class="section-head"><div><div class="eyebrow">Toolkit</div><h2>Skills that support the full workflow.</h2></div></div>
+  <div class="skills">
+   <div class="skill"><b>Power BI</b><span>DAX · Power Query · Data Modeling · KPI dashboards</span></div>
+   <div class="skill"><b>Data & SQL</b><span>SQL · ETL · Data Cleaning · Relationships</span></div>
+   <div class="skill"><b>Excel</b><span>VLOOKUP · Pivot Tables · Reporting</span></div>
+   <div class="skill"><b>AI Tools</b><span>ChatGPT · Copilot · Gemini · Claude</span></div>
+   <div class="skill"><b>Accounting</b><span>Tally ERP · GST · Reconciliation · Bookkeeping</span></div>
+   <div class="skill"><b>Visualization</b><span>Interactive charts · slicers · drill-through reports</span></div>
+   <div class="skill"><b>Python</b><span>Basic Python for analytics</span></div>
+   <div class="skill"><b>Tableau</b><span>Basic Tableau knowledge</span></div>
+  </div>
+ </div>
+</section>
+
+<section id="projects">
+ <div class="container">
+  <div class="section-head"><div><div class="eyebrow">Selected Work</div><h2>Dashboards & creative projects.</h2></div>
+  <p>For the dashboard section, I used the actual dashboard screenshots rather than a redesigned/mock image, so your portfolio shows your real work clearly.</p></div>
+  <div class="filters">
+   <button class="filter active" data-filter="all">All Projects</button>
+   <button class="filter" data-filter="powerbi">Power BI</button>
+   <button class="filter" data-filter="canva">Canva</button>
+  </div>
+  <div class="projects">
+   <article class="project" data-type="powerbi">
+    <div class="thumb"><img src="assets/retail-sales-dashboard.jpg" alt="Retail Sales and Growth Power BI dashboard"></div>
+    <div class="project-body"><div class="project-type">Power BI Dashboard</div><h3>Retail Sales & Growth Analysis</h3><p>Executive-style view of ₹126M revenue, ₹87M profit and 4M units with product, category and monthly trends.</p><div class="tags"><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Power Query</span><span class="tag">Data Modeling</span></div></div>
+   </article>
+   <article class="project" data-type="powerbi">
+    <div class="thumb"><img src="assets/hr-analytics-dashboard.jpg" alt="HR Analytics Power BI dashboard"></div>
+    <div class="project-body"><div class="project-type">Power BI Dashboard</div><h3>HR Analytics Dashboard</h3><p>Analyzed 1,480 employees with attrition views across age, gender, education, salary and job role.</p><div class="tags"><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">HR Analytics</span></div></div>
+   </article>
+   <article class="project" data-type="powerbi">
+    <div class="thumb"><img src="assets/ecommerce-sales-dashboard.jpg" alt="E-Commerce Sales Power BI dashboard"></div>
+    <div class="project-body"><div class="project-type">Power BI Dashboard</div><h3>E-Commerce Performance</h3><p>Analyzed ₹438K revenue and 5,615 units sold with regional, category, customer and payment insights.</p><div class="tags"><span class="tag">Power BI</span><span class="tag">Drill-through</span><span class="tag">Sales Analysis</span></div></div>
+   </article>
+   <article class="project" data-type="powerbi">
+    <div class="thumb"><img src="assets/sales-report-dashboard.jpg" alt="Sales Report Power BI dashboard"></div>
+    <div class="project-body"><div class="project-type">Power BI Dashboard</div><h3>Sales Performance Report</h3><p>Tracks revenue, profit and units across product categories with monthly and yearly trend analysis.</p><div class="tags"><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Reporting</span></div></div>
+   </article>
+   <article class="project canva" data-type="canva">
+    <div class="thumb"><img src="assets/potato-chips-canva.png" alt="Potato chips promotional Canva design"></div>
+    <div class="project-body"><div class="project-type">Canva · Creative Project</div><h3>Potato Chips Promotion</h3><p>Promotional social-media creative focused on product presentation, offer messaging, typography and visual hierarchy.</p><div class="tags"><span class="tag">Canva</span><span class="tag">Graphic Design</span><span class="tag">Social Media</span></div></div>
+   </article>
+   <article class="project canva" data-type="canva">
+    <div class="thumb"><img src="assets/strawberry-ice-cream-canva.png" alt="Strawberry ice cream promotional Canva design"></div>
+    <div class="project-body"><div class="project-type">Canva · Creative Project</div><h3>Strawberry Ice Cream Promotion</h3><p>Playful promotional poster using product imagery, offer-led messaging, composition and brand-focused layout.</p><div class="tags"><span class="tag">Canva</span><span class="tag">Branding</span><span class="tag">Graphic Design</span></div></div>
+   </article>
+  </div>
+ </div>
+</section>
+
+<section id="experience">
+ <div class="container">
+  <div class="section-head"><div><div class="eyebrow">Experience</div><h2>Practical experience.</h2></div></div>
+  <div class="timeline">
+   <div class="job"><div class="date">APR 2026 – MAY 2026</div><h3>Power BI Intern · Sysslan IT Solutions</h3><p>Developed interactive retail dashboards, built KPI/DAX measures, transformed datasets in Power Query, designed visualizations and automated recurring reporting workflows.</p></div>
+   <div class="job"><div class="date">MAR 2026 – APR 2026</div><h3>Accounts Assistant · Auditor Office</h3><p>Prepared sales data in Excel, maintained Tally ERP records and supported invoice reconciliation, strengthening accuracy and structured reporting skills.</p></div>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="container">
+  <div class="about-grid">
+   <div class="panel"><div class="eyebrow">Education</div><h3>Bachelor of Business Administration</h3><p>Theivanai Amma College for Women · 2021–2024 · 75%</p><p>Higher Secondary · 71% · SSLC · 55%</p></div>
+   <div class="panel"><div class="eyebrow">Certifications</div><h3>Professional Learning</h3><p>Power BI Developer — Novitech R&D</p><p>Data Analyst Foundation — Novitech R&D</p><p>SQL — Learnz Development Hub</p><p>Tally with GST — Rishi Tax Wizard</p><p>Excel — Nextgen Solutions</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="contact">
+ <div class="container contact">
+  <div><div class="eyebrow">Contact</div><h2>Let's build useful insights together.</h2><p style="color:var(--muted);max-width:560px">I'm looking for opportunities where I can use Power BI, analytics and reporting skills to support business decisions.</p>
+   <div class="actions"><a class="btn primary" href="mailto:kbvinitha6@gmail.com?subject=Portfolio%20Opportunity">Email Me</a><a class="btn" href="tel:+919344679971">Call Me</a></div>
+  </div>
+  <div class="contact-card">
+   <div class="contact-row"><small>Email</small><a href="mailto:kbvinitha6@gmail.com">kbvinitha6@gmail.com</a></div>
+   <div class="contact-row"><small>Phone</small><a href="tel:+919344679971">+91 93446 79971</a></div>
+   <div class="contact-row"><small>Location</small>Villupuram, Tamil Nadu, India</div>
+   <div class="contact-row"><small>LinkedIn</small><span>Add your LinkedIn URL here</span></div>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer><div class="container">© 2026 Vinitha Baskar · Data Analyst & Power BI Developer · Built as a job-seeker portfolio.</div></footer>
+
+<script>
+const buttons=[...document.querySelectorAll('.filter')];
+const cards=[...document.querySelectorAll('.project')];
+buttons.forEach(btn=>btn.addEventListener('click',()=>{
+  buttons.forEach(b=>b.classList.remove('active')); btn.classList.add('active');
+  const f=btn.dataset.filter;
+  cards.forEach(c=>c.style.display=(f==='all'||c.dataset.type===f)?'block':'none');
+}));
+</script>
+</body>
+</html>
